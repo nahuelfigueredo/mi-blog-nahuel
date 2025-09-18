@@ -493,3 +493,29 @@ footer {
         width: 100%;
     }
 }
+
+/* Video de fondo global */
+.video-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* queda detrás del contenido */
+  filter: brightness(0.4); /* oscurece para que el texto se lea bien */
+}
+
+/* Opcional: overlay extra para más contraste */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* capa oscura encima del video */
+  z-index: -1;
+}
+
+
