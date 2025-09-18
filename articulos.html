@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Nahuel Figueredo - Desarrollo Full-Stack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <header>
+        <nav class="dev-menu-principal">
+            <div class="menu-logo">
+                <a href="index.html">
+                    <img src="fotos/logo1.png" alt="Logo de Full Stack Developer Blog">
+                </a>
+            </div>
+           <div class="menu-contenido">
+    <ul class="menu-fila-superior">
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="articulos.html">Artículos</a></li>
+        <li><a href="tutoriales.html">Tutoriales</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <ul class="menu-fila-inferior">
+        <li><a href="sobre-mi.html">Sobre Mí</a></li>
+        <li><a href="uses.html">/uses</a></li>
+        <li class="redes-sociales">
+            <a href="https://github.com/tu-usuario" target="_blank">
+                <img src="fotos/github.png" alt="GitHub">
+            </a>
+            <a href="https://linkedin.com/in/tu-usuario" target="_blank">
+                <img src="fotos/social.png" alt="LinkedIn">
+            </a>
+            <a href="https://instagram.com/tu-usuario" target="_blank">
+                <img src="fotos/instagram.png" alt="Instagram">
+            </a>
+            <a href="mailto:tu-correo@gmail.com" target="_blank">
+                <img src="fotos/gmail.png" alt="Gmail">
+            </a>
+            <a href="https://youtube.com/tu-usuario" target="_blank">
+                <img src="fotos/youtube.png" alt="YouTube">
+            </a>
+        </li>
+    </ul>
+</div>
+        </nav>
+        
+        <h1>Mi Viaje Full-Stack</h1>
+        <p>Un espacio para documentar mis proyectos, explorar nuevas tecnologías y compartir mi experiencia en el desarrollo.</p>
+    </header>
+
+
+    <main>
+      <section class="articulos">
+    <h2>Últimos Artículos</h2>
+
+    <article>
+        <h3>Configurando mi Entorno de Desarrollo con Docker</h3>
+        <p>Fecha: 2 de septiembre de 2025</p>
+        <p>En este artículo, te explico cómo uso Docker para estandarizar mis entornos de desarrollo y evitar el clásico "en mi máquina sí funciona".</p>
+        <pre><code>
+# docker-compose.yml
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+        </code></pre>
+    </article>
+
+    <article>
+        <h3>Comparativa: ¿MongoDB o PostgreSQL?</h3>
+        <p>Fecha: 28 de agosto de 2025</p>
+        <p>Un análisis de las diferencias entre bases de datos SQL y NoSQL y cuándo es más adecuado usar cada una en tus proyectos full-stack.</p>
+    </article>
+
+    <article>
+        <h3>Mis herramientas favoritas como desarrollador Full-Stack</h3>
+        <p>Fecha: 25 de septiembre de 2025</p>
+        <p>
+            En mi día a día, confío en un conjunto de herramientas que hacen que mi trabajo como desarrollador full-stack sea más eficiente y agradable. Desde el código hasta el despliegue, aquí están las que no pueden faltar en mi arsenal.
+        </p>
+        <h4>Editor de Código: Visual Studio Code</h4>
+        <p>
+            Para mí, el **editor de código** es la pieza central de mi trabajo. Visual Studio Code no solo es ligero y rápido, sino que su ecosistema de extensiones lo hace increíblemente poderoso. Extensiones como Prettier, Live Server y Docker me ayudan a ser más productivo.
+        </p>
+        <h4>Control de Versiones: Git</h4>
+        <p>
+            El control de versiones es fundamental para cualquier proyecto. **Git** me permite rastrear cada cambio, colaborar con otros desarrolladores y revertir errores fácilmente. Lo uso a diario para manejar ramas, fusionar código y subir cambios a repositorios remotos en GitHub.
+        </p>
+        <h4>Entornos: Docker</h4>
+        <p>
+            Docker ha transformado mi forma de trabajar. Ahora, puedo empaquetar mis aplicaciones y sus dependencias en contenedores, asegurando que "funcione en mi máquina" sea un problema del pasado. Es ideal para probar diferentes configuraciones sin afectar mi sistema operativo.
+        </p>
+        <pre><code>
+# Ejemplo de un Dockerfile simple para una app Node.js
+FROM node:18
+WORKDIR /app
+COPY package.json .
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["node", "app.js"]
+        </code></pre>
+    </article>
+</section>
+       
+          
+    
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nahuel Figueredo. Desarrollado con pasión.</p>
+      
+    </footer>
+
+</body>
+</html>
