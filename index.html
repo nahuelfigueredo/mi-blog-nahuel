@@ -8,17 +8,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=1.2">
+    <link rel="stylesheet" href="style.css?v=1.4">
 </head>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
-<video autoplay muted loop playsinline class="video-fondo">
-  <source src="fotos/video.logo.mp4" type="video/mp4">
-  Tu navegador no soporta videos.
+  
 </video>
-
-
     <header>
+     <video autoplay muted loop id="video-fondo">
+    <source src="fotos/video.logo.mp4" type="video/mp4">
+    <source src="fotos/video.logo.mp4" type="video/webm">
+    Tu navegador no soporta el tag de video.
+</video>
+ </header>
+ 
+
         <nav class="dev-menu-principal">
             <div class="menu-logo">
                 <a href="index.html">
@@ -56,19 +60,16 @@
             </div>
         </nav>
 
-        <!-- HERO CON VIDEO DE FONDO -->
-        <div class="hero">
-            <video autoplay muted loop playsinline>
-                 <source src="fotos/video.logo.mp4" type="video/mp4">
-                 
-                Tu navegador no soporta videos.
-            </video>
-            <div class="hero-content">
-                <h1>Mi Viaje Full-Stack</h1>
-                <p>Un espacio para documentar mis proyectos, explorar nuevas tecnologías y compartir mi experiencia en el desarrollo.</p>
-            </div>
+
+
+        <!-- HERO -->
+        <div class="hero-content">
+            <h1>Mi Viaje Full-Stack</h1>
+            <p>Un espacio para documentar mis proyectos, explorar nuevas tecnologías y compartir mi experiencia en el desarrollo.</p>
         </div>
     </header>
+
+      
 
     <main>
         <section class="proyectos">
@@ -123,15 +124,15 @@ services:
                 </p>
                 <h4>Editor de Código: Visual Studio Code</h4>
                 <p>
-                    Para mí, el **editor de código** es la pieza central de mi trabajo. Visual Studio Code no solo es ligero y rápido, sino que su ecosistema de extensiones lo hace increíblemente poderoso. Extensiones como Prettier, Live Server y Docker me ayudan a ser más productivo.
+                    Visual Studio Code no solo es ligero y rápido, sino que su ecosistema de extensiones lo hace increíblemente poderoso. Extensiones como Prettier, Live Server y Docker me ayudan a ser más productivo.
                 </p>
                 <h4>Control de Versiones: Git</h4>
                 <p>
-                    El control de versiones es fundamental para cualquier proyecto. **Git** me permite rastrear cada cambio, colaborar con otros desarrolladores y revertir errores fácilmente. Lo uso a diario para manejar ramas, fusionar código y subir cambios a repositorios remotos en GitHub.
+                    El control de versiones es fundamental para cualquier proyecto. Git me permite rastrear cada cambio, colaborar con otros desarrolladores y revertir errores fácilmente.
                 </p>
                 <h4>Entornos: Docker</h4>
                 <p>
-                    Docker ha transformado mi forma de trabajar. Ahora, puedo empaquetar mis aplicaciones y sus dependencias en contenedores, asegurando que "funcione en mi máquina" sea un problema del pasado. Es ideal para probar diferentes configuraciones sin afectar mi sistema operativo.
+                    Docker ha transformado mi forma de trabajar. Ahora, puedo empaquetar mis aplicaciones y sus dependencias en contenedores, asegurando que "funcione en mi máquina" sea un problema del pasado.
                 </p>
                 <pre><code>
 # Ejemplo de un Dockerfile simple para una app Node.js
