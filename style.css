@@ -47,7 +47,7 @@ a:hover {
 
 /* 3. Estilos del Encabezado (Header) */
 header {
-    height: 350px;
+    height: 00px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -64,15 +64,16 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: transparent; /* Fondo transparente */
     z-index: 1;
 }
+
 /* Estilos del Contenido Principal (Hero) */
 .hero-content {
     position: relative;
     z-index: 2;
     text-align: center;
-    padding-top: 150px;
+    padding-top: 10px;
 }
 
 .hero-content h1 {
@@ -88,11 +89,11 @@ header::before {
 /* 4. Estilos del Menú de Navegación */
 .dev-menu-principal {
     width: 100%;
-    position: absolute;
-    top: 0;
+   
     left: 0;
-    z-index: 10;
-    padding: 20px 40px;
+    z-index: 100;
+    padding: 15px 40px;
+    background-color: transparent; /* Menú transparente para que el video se vea a través */
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -100,7 +101,7 @@ header::before {
 }
 
 .menu-logo img {
-    height: 200px;
+    height: 100px;
     transition: transform 0.3s;
 }
 
@@ -108,31 +109,35 @@ header::before {
     transform: scale(1.1);
 }
 
-.menu-contenido {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.menu-fila-superior,
-.menu-fila-inferior {
+.menu-links {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     gap: 25px;
-    align-items: center;
     font-size: 1.2rem;
+    margin-left: 30px;
 }
 
-.menu-fila-inferior {
-    margin-top: 10px;
+.menu-links a {
+    color: #f0f0f0;
+    transition: color 0.3s ease;
+}
+
+.menu-links a:hover {
+    color: #61dafb;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.menu-derecha {
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
 .redes-sociales {
+    list-style: none;
     display: flex;
     gap: 15px;
-    margin-left: 25px;
 }
 
 .redes-sociales img {
@@ -145,17 +150,9 @@ header::before {
     transform: translateY(-2px);
 }
 
-.menu-fila-superior a,
-.menu-fila-inferior a {
-    color: #f0f0f0;
-    transition: color 0.3s ease;
-}
-
-.menu-fila-superior a:hover,
-.menu-fila-inferior a:hover {
-    color: #61dafb;
-    text-decoration: underline;
-    text-underline-offset: 4px;
+/* Ajustes para el contenido principal para evitar que el menú lo tape */
+main {
+    padding-top: 00px;
 }
 
 /* 5. Estilos de la Sección de Contenido */
@@ -392,82 +389,55 @@ footer {
 
 /* 10. Estilos para móviles (Responsive) */
 @media (max-width: 768px) {
-    /* Ajustes generales */
     body {
         font-size: 1rem;
     }
 
     header {
-        height: auto; /* Allow the header to adjust to its content */
+        height: auto;
     }
 
-    /* Ajuste para el menú de navegación */
     .dev-menu-principal {
         flex-direction: column;
-        position: relative; /* Change position to relative */
-        top: auto;
-        left: auto;
         padding: 10px 20px;
         align-items: center;
         text-align: center;
         justify-content: center;
     }
 
+    .menu-izquierda, .menu-derecha {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
     .menu-logo {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-    
-    .menu-logo img {
-        height: 50px;
-    }
-    
-    .menu-contenido {
-        align-items: center;
-        width: 100%;
+        margin-bottom: 10px;
     }
 
-    .menu-fila-superior, .menu-fila-inferior {
-        flex-direction: column; /* Changed to column to stack the menu */
-        gap: 10px;
-        font-size: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .redes-sociales {
-        margin-top: 15px;
+    .menu-links {
+        flex-direction: column;
         margin-left: 0;
+        gap: 10px;
     }
 
-    .redes-sociales img {
-        height: 25px;
-        width: 25px;
-        max-width: 25px;
+    .menu-buscar input {
+        width: 100%;
     }
 
-    /* Títulos y contenido del hero */
-    .hero-content {
-        padding-top: 20px; /* Adjust top padding to create space below the menu */
+    .menu-buscar button {
+        margin-left: -50px;
     }
 
-    .hero-content h1 {
-        font-size: 2rem;
+    main {
+        padding-top: 00px;
     }
 
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    /* Contenedores de secciones */
     .proyectos, .articulos, .tutoriales, .contacto, .sobre-mi, .uses {
         padding: 2rem;
         margin: 2rem auto;
     }
 
-    /* Elementos del proyecto */
     .proyecto-item {
         flex-direction: column;
         text-align: center;
@@ -479,7 +449,6 @@ footer {
         margin-bottom: 1rem;
     }
 
-    /* Estilos de la página Sobre Mí */
     .habilidades-container {
         flex-direction: column;
     }
